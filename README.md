@@ -134,4 +134,4 @@ for i := 0; i < 5; i++ {
 }
 ```
 
-Este repositório será atualizado com mais conteúdo conforme avançamos nos estudos sobre Go!
+Este repositório será atualizado com mais conteúdo conforme avanço nos estudos sobre Go!

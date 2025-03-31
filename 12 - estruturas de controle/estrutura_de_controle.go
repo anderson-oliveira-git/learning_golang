@@ -28,4 +28,28 @@ func main() {
 	} else {
 		fmt.Printf("%d é considerado menor de idade", idade)
 	}
+
+	// Switch
+	diaDaSemana(2)
+}
+
+func diaDaSemana(dia int) string {
+	switch dia {
+	case 0:
+		return "Domingo"
+	case 1:
+		return "Segunda-feira"
+	case 2:
+		return "Terça-feira"
+	case 3:
+		return "Quarta-feira"
+	case 4:
+		return "Quinta-feira"
+	case 5:
+		return "Sexta-feira"
+	case 6:
+		return "Sábado"
+	default:
+		return "Dia inválido"
+	}
 }

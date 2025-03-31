@@ -178,11 +178,11 @@ for nome, idade := range idades {
 }
 ```
 
-### 14. Funções com Retorno Nomeado em Go  
+### 14. Funções com Retorno Nomeado em Go
 
-Em Go, é possível definir funções com retornos nomeados. Isso significa que os valores de retorno podem ser declarados junto com os tipos na assinatura da função, permitindo que sejam atribuídos dentro da função sem a necessidade de um `return` explícito.  
+Em Go, é possível definir funções com retornos nomeados. Isso significa que os valores de retorno podem ser declarados junto com os tipos na assinatura da função, permitindo que sejam atribuídos dentro da função sem a necessidade de um `return` explícito.
 
-#### Exemplo de Função com Retorno Nomeado  
+#### Exemplo de Função com Retorno Nomeado
 
 ```go
 package main
@@ -200,7 +200,31 @@ func main() {
     s, sub := somaESubtracao(10, 5)
     fmt.Printf("Soma: %d, Subtração: %d\n", s, sub)
 }
+```
 
+### 15. Funções Variádicas em Go
+
+Em Go, funções variádicas permitem que um número indefinido de argumentos do mesmo tipo seja passado para a função. Isso é útil quando não se sabe quantos argumentos serão fornecidos durante a chamada da função.
+
+#### Exemplo de Função Variádica
+
+```go
+package main
+
+import "fmt"
+
+// Função variádica que soma todos os números passados como argumento
+func soma(numeros ...int) int {
+    total := 0
+    for _, num := range numeros {
+        total += num
+    }
+    return total
+}
+
+func main() {
+    resultado := soma(1, 2, 3, 4, 5)
+    fmt.Printf("Soma: %d\n", resultado)
+}
 
 Este repositório será atualizado com mais conteúdo conforme avanço nos estudos sobre Go!
-

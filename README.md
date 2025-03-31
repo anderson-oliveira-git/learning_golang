@@ -226,5 +226,36 @@ func main() {
     resultado := soma(1, 2, 3, 4, 5)
     fmt.Printf("Soma: %d\n", resultado)
 }
+```
+
+### 16. Funções Anônimas em Go
+
+Funções anônimas são aquelas que não possuem um nome e podem ser usadas para criar funções "inline" ou para passar funções como parâmetros. Elas são muito úteis quando você precisa de uma função rapidamente e não quer se preocupar em dar um nome a ela.
+
+#### Exemplo de Função Anônima
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Função anônima atribuída a uma variável
+    soma := func(a, b int) int {
+        return a + b
+    }
+
+    // Chamando a função anônima
+    resultado := soma(10, 20)
+    fmt.Printf("Soma: %d\n", resultado)
+
+    // Usando a função anônima diretamente dentro de outra função
+    resultado2 := func(a, b int) int {
+        return a * b
+    }(5, 6)
+
+    fmt.Printf("Multiplicação: %d\n", resultado2)
+}
+
 
 Este repositório será atualizado com mais conteúdo conforme avanço nos estudos sobre Go!

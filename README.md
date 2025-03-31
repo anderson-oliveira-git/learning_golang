@@ -120,7 +120,7 @@ Maps são coleções chave-valor.
 pessoa := map[string]int{"Alice": 25, "Bob": 30}
 ```
 
-### 112. Estruturas de Controle
+### 12. Estruturas de Controle
 
 Go tem `if`, `for` e `switch`.
 
@@ -134,4 +134,49 @@ for i := 0; i < 5; i++ {
 }
 ```
 
+### 13. Loops em Go
+
+Em Go, o loop `for` é a única estrutura de repetição disponível, mas ele pode ser usado de diferentes formas:
+
+#### Loop Clássico
+```go
+for i := 0; i < 5; i++ {
+    fmt.Println(i)
+}
+```
+
+#### Loop como While
+```go
+i := 0
+for i < 5 {
+    fmt.Println(i)
+    i++
+}
+```
+
+#### Loop Infinito
+```go
+for {
+    fmt.Println("Executando...")
+    break // Necessário para evitar loop infinito
+}
+```
+
+#### Iterando sobre um Slice
+```go
+numeros := []int{10, 20, 30, 40}
+for i, num := range numeros {
+    fmt.Printf("Índice: %d, Valor: %d\n", i, num)
+}
+```
+
+#### Iterando sobre um Map
+```go
+idades := map[string]int{"Alice": 25, "Bob": 30}
+for nome, idade := range idades {
+    fmt.Printf("Nome: %s, Idade: %d\n", nome, idade)
+}
+```
+
 Este repositório será atualizado com mais conteúdo conforme avanço nos estudos sobre Go!
+

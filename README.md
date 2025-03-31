@@ -120,7 +120,7 @@ Maps são coleções chave-valor.
 pessoa := map[string]int{"Alice": 25, "Bob": 30}
 ```
 
-### 112. Estruturas de Controle
+### 12. Estruturas de Controle
 
 Go tem `if`, `for` e `switch`.
 
@@ -134,4 +134,73 @@ for i := 0; i < 5; i++ {
 }
 ```
 
-Este repositório será atualizado com mais conteúdo conforme avançamos nos estudos sobre Go!
+### 13. Loops em Go
+
+Em Go, o loop `for` é a única estrutura de repetição disponível, mas ele pode ser usado de diferentes formas:
+
+#### Loop Clássico
+```go
+for i := 0; i < 5; i++ {
+    fmt.Println(i)
+}
+```
+
+#### Loop como While
+```go
+i := 0
+for i < 5 {
+    fmt.Println(i)
+    i++
+}
+```
+
+#### Loop Infinito
+```go
+for {
+    fmt.Println("Executando...")
+    break // Necessário para evitar loop infinito
+}
+```
+
+#### Iterando sobre um Slice
+```go
+numeros := []int{10, 20, 30, 40}
+for i, num := range numeros {
+    fmt.Printf("Índice: %d, Valor: %d\n", i, num)
+}
+```
+
+#### Iterando sobre um Map
+```go
+idades := map[string]int{"Alice": 25, "Bob": 30}
+for nome, idade := range idades {
+    fmt.Printf("Nome: %s, Idade: %d\n", nome, idade)
+}
+```
+
+### 14. Funções com Retorno Nomeado em Go  
+
+Em Go, é possível definir funções com retornos nomeados. Isso significa que os valores de retorno podem ser declarados junto com os tipos na assinatura da função, permitindo que sejam atribuídos dentro da função sem a necessidade de um `return` explícito.  
+
+#### Exemplo de Função com Retorno Nomeado  
+
+```go
+package main
+
+import "fmt"
+
+// Função com retorno nomeado
+func somaESubtracao(a, b int) (soma int, subtracao int) {
+    soma = a + b
+    subtracao = a - b
+    return // Retorna os valores nomeados automaticamente
+}
+
+func main() {
+    s, sub := somaESubtracao(10, 5)
+    fmt.Printf("Soma: %d, Subtração: %d\n", s, sub)
+}
+
+
+Este repositório será atualizado com mais conteúdo conforme avanço nos estudos sobre Go!
+

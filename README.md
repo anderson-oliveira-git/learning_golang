@@ -178,5 +178,29 @@ for nome, idade := range idades {
 }
 ```
 
+### 14. Funções com Retorno Nomeado em Go  
+
+Em Go, é possível definir funções com retornos nomeados. Isso significa que os valores de retorno podem ser declarados junto com os tipos na assinatura da função, permitindo que sejam atribuídos dentro da função sem a necessidade de um `return` explícito.  
+
+#### Exemplo de Função com Retorno Nomeado  
+
+```go
+package main
+
+import "fmt"
+
+// Função com retorno nomeado
+func somaESubtracao(a, b int) (soma int, subtracao int) {
+    soma = a + b
+    subtracao = a - b
+    return // Retorna os valores nomeados automaticamente
+}
+
+func main() {
+    s, sub := somaESubtracao(10, 5)
+    fmt.Printf("Soma: %d, Subtração: %d\n", s, sub)
+}
+
+
 Este repositório será atualizado com mais conteúdo conforme avanço nos estudos sobre Go!
 

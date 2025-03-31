@@ -29,5 +29,8 @@ func main() {
 	// exemplo: resultadoCalculoSoma, _ := calculoMatematico(10, 15) ::
 	// no exemplo acima, apenas a soma será retornada ::
 	resultadoCalculoSoma, resultadoCalculoSubtracao := calculoMatematico(10, 15)
+	_, subtracao := calculoMatematico(10, 15)
+
 	fmt.Println(resultadoCalculoSoma, resultadoCalculoSubtracao)
+	fmt.Println(resultadoCalculoSoma, subtracao)
 }
